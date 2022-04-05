@@ -1,6 +1,7 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpacPlugin = require('html-webpack-plugin');
+const webpack = require('webpack')
+const path = require('path')
+const HtmlWebpacPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 const config = {
   entry: './src/index.tsx',
@@ -38,7 +39,16 @@ const config = {
     new HtmlWebpacPlugin({
       template: path.resolve(__dirname, './src/index.html'),
     }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'source',
+          to: 'dest',
+          noErrorOnMissing: true,
+        },
+      ],
+    }),
   ],
-};
+}
 
-module.exports = config;
+module.exports = config
