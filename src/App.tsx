@@ -1,10 +1,12 @@
 import './style.css'
-import HomePage from './pages/HomePage'
+import Header from './components/header/Header'
+import Home from './pages/Home'
 
 export const App = () => {
   return (
     <div>
-      <HomePage />
+      <Header />
+      <Home />
     </div>
   )
 }

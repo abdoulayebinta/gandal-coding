@@ -1,4 +1,4 @@
-const HomePage = () => {
+const Home = () => {
   return (
     <div>
       <h2>Craft your path to success.</h2>
@@ -6,4 +6,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default Home
