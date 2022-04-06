@@ -1,9 +1,16 @@
 import './Home.css'
+import HomeImg from '../../assets/banner.png'
 
 const Home = () => {
   return (
     <div className="home">
-      <h2>Craft your path to success.</h2>
+      <div className="home__container">
+        <img
+          src={HomeImg}
+          className="home__image"
+          alt="Empowering women in tech"
+        />
+      </div>
     </div>
   )
 }
